@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Dynamic colors - populated via CSS variables from briefing
         primary: {
           DEFAULT: 'var(--color-primary)',
           hover: 'var(--color-primary-hover)',
@@ -48,6 +49,7 @@ const config: Config = {
         info: 'var(--color-info)',
       },
       fontFamily: {
+        // Dynamic fonts - populated via CSS variables from briefing
         display: ['var(--font-display)', 'Georgia', 'serif'],
         heading: ['var(--font-heading)', 'system-ui', 'sans-serif'],
         body: ['var(--font-body)', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],

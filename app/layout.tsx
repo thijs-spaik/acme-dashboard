@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import { inter } from './fonts'
+import { displayFont, headingFont, bodyFont } from './fonts'
 import './globals.css'
 
 export const metadata: Metadata = {
   title: 'ACME Corp | Streamlined Project Management',
-  description: 'Enterprise-grade project management for modern teams. Streamline workflows, boost productivity, and deliver projects on time.',
+  description: 'Enterprise-grade project management that keeps your teams aligned, productive, and delivering on time.',
 }
 
 export default function RootLayout({
@@ -13,7 +13,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.variable} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${displayFont.variable} ${headingFont.variable} ${bodyFont.variable}`}
+    >
       <body className="min-h-screen bg-surface text-text antialiased">
         {children}
       </body>

@@ -1,14 +1,29 @@
-import { Inter } from 'next/font/google'
+import { Inter, Space_Grotesk } from 'next/font/google'
 
-// Swiss/Minimalist typography - Inter is perfect for clean, professional aesthetics
-export const inter = Inter({
+// Display font - Space Grotesk for bold headlines
+// Swiss/Minimalist: geometric, precise, authoritative
+export const displayFont = Space_Grotesk({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-display',
+  display: 'swap',
+  weight: ['300', '400', '500', '600', '700'],
+})
+
+// Heading font - Space Grotesk for section headers
+export const headingFont = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-heading',
   display: 'swap',
   weight: ['400', '500', '600', '700'],
 })
 
-// Export fonts for use in layout
-export const displayFont = inter
-export const headingFont = inter
-export const bodyFont = inter
+// Body font - Inter for readable body text
+export const bodyFont = Inter({
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+  weight: ['300', '400', '500', '600'],
+})
+
+// Legacy export for template compatibility
+export const inter = bodyFont

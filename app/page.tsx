@@ -1,19 +1,23 @@
-import { Navigation } from '@/components/navigation'
+import { Navbar } from '@/components/navbar'
 import { Hero } from '@/components/hero'
 import { Features } from '@/components/features'
+import { DashboardPreview } from '@/components/dashboard-preview'
 import { Stats } from '@/components/stats'
-import { CTA } from '@/components/cta'
+import { HowItWorks } from '@/components/how-it-works'
+import { CtaSection } from '@/components/cta-section'
 import { Footer } from '@/components/footer'
 
 export default function Home() {
   return (
     <>
-      <Navigation />
+      <Navbar />
       <main>
         <Hero />
-        <Stats />
+        <DashboardPreview />
         <Features />
-        <CTA />
+        <Stats />
+        <HowItWorks />
+        <CtaSection />
       </main>
       <Footer />
     </>
